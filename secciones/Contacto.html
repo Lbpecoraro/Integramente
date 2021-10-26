@@ -22,7 +22,7 @@
         <div class="row justify-content-between">
             <div class="header__h1YNav col-lg-8 col-12">
                 <a class="header__elH1" href="../index.html">
-                    <h1 class="m-0">INTEGRAMENTE</h1>
+                    <h1 class="my-0 ms-0 me-sm-5 ">INTEGRAMENTE</h1>
                 </a>
                 <nav class="navbar navbar-expand-lg header__navbar p-0">
                     <div class="container-fluid p-0">
@@ -33,24 +33,18 @@
                         </button>
                         <div class="collapse navbar-collapse header__subMenu" id="navbarNavDropdown">
                             <ul class="navbar-nav header__ul">
-                                <input type="button" value="Iniciar sesión" class="inicioDeSesion d-lg-none">
+                                <button type="button" class="btn inicioDeSesion  d-block d-lg-none col-lg-1"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <div class="inicioDeSesion__iconContainer ">
+                                        <ion-icon name="person-outline"></ion-icon>
+                                    </div>
+                                </button>
                                 <li class="nav-item">
                                     <a class="aGradient nav-link active" aria-current="page"
                                         href="../index.html">Home</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="aGradient nav-link dropdown-toggle" href="Servicios.html"
-                                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Servicios
-                                    </a>
-                                    <ul class="dropdown-menu p-0" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="Servicios.html">Según cantidad</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="Servicios.html">Según
-                                                especialidad</a>
-                                        </li>
-                                    </ul>
+
+                                <li class="nav-item">
+                                    <a class="aGradient nav-link" href="Servicios.html">Servicios</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="aGradient nav-link" href="NuestrosProfesionales.html">Profesionales</a>
@@ -66,7 +60,41 @@
                     </div>
                 </nav>
             </div>
-            <input type="button" value="Iniciar sesión" class="inicioDeSesion d-none d-lg-block col-lg-1">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn inicioDeSesion  d-none d-lg-block col-lg-1" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <div class="inicioDeSesion__iconContainer ">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal  fade modalInicioDeSesion" id="exampleModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+
+                            <h3 class="modalInicioDeSesion__h3"> Bienvenid@s a Integramente</h3>
+                            <form action="">
+                                <div>
+                                    <label for="email">Correo electrónico</label>
+                                    <input class="modalInicioDeSesion__email" type="email" name="email" id=""
+                                        placeholder="Ingrese su correo electrónico">
+                                </div>
+                                <div>
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" class="modalInicioDeSesion__password"
+                                        placeholder="Ingrese su contraseña" name="password">
+                                </div>
+                                <input class="inicioDeSesion__send" type="submit" value="Iniciar sesión">
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <!-- Acá van las redes sociales -->
             <div class="header__redes d-lg-flex d-none col-lg-1">
                 <a href="https://www.facebook.com/">

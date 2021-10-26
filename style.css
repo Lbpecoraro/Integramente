@@ -33,7 +33,7 @@ html {
     width: 100%;
     height: 100%;
     align-items: flex-start;
-    padding: 1rem 1rem 0 0;
+    padding: 0;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -41,7 +41,6 @@ html {
     width: 100%;
     height: 100%;
     align-items: flex-start;
-    padding: 0;
   }
 }
 .header .row {
@@ -68,6 +67,11 @@ html {
 
 .header__elH1 {
   text-decoration: none;
+}
+@media only screen and (max-width: 767px) {
+  .header__elH1 {
+    margin-top: 0.5rem;
+  }
 }
 .header__elH1 h1 {
   background: linear-gradient(to top, #9E05FF, #F2DCFF);
@@ -113,8 +117,9 @@ html {
   box-shadow: none;
 }
 .navbar-toggler ion-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
+  color: #c06cf5;
 }
 
 .header__ul {
@@ -160,12 +165,62 @@ html {
   transition: all 0.5s ease;
 }
 
-.inicioDeSesion {
-  height: 100%;
+.inicioDeSesion:focus {
+  box-shadow: none;
 }
-.inicioDeSesion ion-icon {
+
+.inicioDeSesion__iconContainer {
+  height: 100%;
   width: 2rem;
   height: 2rem;
+  color: #9E05FF;
+}
+.inicioDeSesion__iconContainer ion-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.modalInicioDeSesion {
+  margin-top: 15rem;
+}
+.modalInicioDeSesion .modal-dialog {
+  display: flex;
+  justify-content: center;
+}
+.modalInicioDeSesion .modal-content {
+  height: 20rem;
+  width: 30rem;
+  border: none;
+  border-radius: 1rem;
+}
+.modalInicioDeSesion .modal-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #c06cf5;
+  color: white;
+  border-radius: 1rem;
+}
+.modalInicioDeSesion .modalInicioDeSesion__h3 {
+  align-self: center;
+}
+.modalInicioDeSesion form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.modalInicioDeSesion form div {
+  display: flex;
+  flex-direction: column;
+}
+.modalInicioDeSesion .inicioDeSesion__send {
+  width: 7rem;
+  align-self: flex-end;
+  background: white;
+  color: #c06cf5;
+  border: none;
+  border-radius: 0.5rem;
 }
 
 .header__redes {
@@ -214,7 +269,7 @@ html {
 .mainIndex__info {
   width: 100%;
   height: 60vh;
-  background: url(../images/chica.jpg);
+  background: url(../images/lavandaFondo5.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 14% 50%;
@@ -223,7 +278,6 @@ html {
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  padding-right: 30rem;
 }
 @media only screen and (max-width: 767px) {
   .mainIndex__info {
@@ -234,18 +288,30 @@ html {
 @media only screen and (max-width: 575px) {
   .mainIndex__info {
     padding-right: 0;
+    width: 100%;
+    height: 80vh;
   }
 }
 .mainIndex__info h3 {
-  font-weight: 100;
+  font-weight: 400;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
+  padding-left: 1rem;
 }
 .mainIndex__info p {
-  width: 100%;
+  width: 70%;
   line-height: 1.5rem;
   letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 1.15rem;
   font-family: "Montserrat", sans-serif;
+  padding-left: 1rem;
+}
+@media only screen and (max-width: 575px) {
+  .mainIndex__info p {
+    padding: 1rem;
+    width: 100%;
+  }
 }
 
 .mainIndex__planes {
@@ -339,7 +405,7 @@ html {
 .footer {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, #c06cf5, #5c0096);
+  background: linear-gradient(to right, #c06cf5, #5c0096);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -397,10 +463,10 @@ html {
 }
 
 .mainServicios {
-  background: url(../images/cafeYLavanda.jpg);
+  background: url(../images/lavandaFondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 30% 30%;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -507,6 +573,27 @@ html {
   background-position: 50% 50%;
 }
 
+.mainServicios__div--TerapiaExistencialHumanista {
+  background: url(../images/terapiaExisencial.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.mainServicios__div--TerapiaGestaltica {
+  background: url(../images/terapiaGestaltica.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.mainServicios__div--TerapiaInfantoJuvenil {
+  background: url(../images/terapiaJuvenil.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -516,7 +603,7 @@ html {
   background: url(../images/lavandaFondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 80%;
   width: 100%;
   height: 100%;
 }
@@ -579,6 +666,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: flex-start;
   height: 100%;
 }
 @media only screen and (max-width: 575px) {
@@ -589,6 +677,98 @@ html {
 .profesional p {
   color: white;
   margin: 0;
+}
+
+.mainProfesionales__modalProfesional:focus {
+  box-shadow: none;
+}
+
+.modal-open {
+  padding: 0;
+}
+
+.modalProfesional .modal-dialog {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  max-width: 55rem;
+}
+@media only screen and (max-width: 991px) {
+  .modalProfesional .modal-dialog {
+    margin-top: 20%;
+    max-width: 50rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .modalProfesional .modal-dialog {
+    margin-top: 20%;
+    max-width: 45rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .modalProfesional .modal-dialog {
+    margin-top: 10%;
+    max-width: 40rem;
+    padding: 0;
+  }
+}
+.modalProfesional .modal-content {
+  width: 100%;
+  border: none;
+  background: linear-gradient(to top, #9E05FF, #F2DCFF);
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 575px) {
+  .modalProfesional .modal-content {
+    width: 75%;
+  }
+}
+.modalProfesional .modal-body {
+  width: 100%;
+}
+
+.tarjetaProfesional {
+  flex-direction: row;
+  border-radius: 0.5rem;
+  border: none;
+  overflow: hidden;
+  background: linear-gradient(to top, #9E05FF, #c06cf5);
+  color: white;
+}
+.tarjetaProfesional img {
+  width: 50%;
+}
+@media only screen and (max-width: 575px) {
+  .tarjetaProfesional {
+    flex-direction: column;
+  }
+  .tarjetaProfesional img {
+    width: 20rem;
+    margin-top: 0.5rem;
+    align-self: center;
+    border-radius: 20rem;
+  }
+}
+.tarjetaProfesional .tarjetaProfesional__info {
+  display: flex;
+  flex-direction: column;
+}
+.tarjetaProfesional .list-group-item {
+  background: transparent;
+  color: white;
+}
+.tarjetaProfesional .btn {
+  color: white;
+  background: #c06cf5;
+  align-self: flex-end;
+  margin: 0 0.5rem 0.5rem 0;
+  border-radius: 0.5rem;
+}
+.tarjetaProfesional .btn:hover {
+  background: #5c0096;
+}
+.tarjetaProfesional .btn:focus {
+  box-shadow: none;
 }
 
 .profesional__img--profesionalHombre1 {
@@ -655,10 +835,10 @@ html {
 .mainBlog {
   width: 100%;
   height: 100%;
-  background: url(../images/cafeYLavanda.jpg);
+  background: url(../images/lavandaFondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 30%;
+  background-position: 30% 80%;
   padding: 1.5rem;
 }
 
@@ -668,7 +848,19 @@ html {
 }
 
 .mainBlog__modalBlog {
-  z-index: 10100;
+  z-index: 101000;
+  margin-top: 14rem;
+}
+.mainBlog__modalBlog .btn {
+  color: black;
+}
+.mainBlog__modalBlog .btn:hover {
+  background: linear-gradient(to top, #9E05FF, #F2DCFF);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.mainBlog__modalBlog .btn:focus {
+  box-shadow: none;
 }
 
 .mainBlog__sectionAdvertencia {
@@ -797,18 +989,94 @@ html {
 
 .mainBlog__articuloGrande {
   height: 15rem;
-  background: url(../images/pibeHaceYoga.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
 .mainBlog__articuloChico {
   height: 10rem;
-  background: url(../images/ataqueDeAnsiedad.jfif);
+}
+
+.mainBlog__articuloGrande--artGrande1 {
+  background: url("../images/artGrande1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: center;
+}
+
+.mainBlog__articuloGrande--artGrande2 {
+  background: url("../images/artGrande2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloGrande--artGrande3 {
+  background: url("../images/artGrande3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloGrande--artGrande4 {
+  background: url("../images/artGrande4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloGrande--artGrande5 {
+  background: url("../images/artGrande5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloGrande--artGrande6 {
+  background: url("../images/artGrande6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloChico--artChico1 {
+  background: url("../images/artChico1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloChico--artChico2 {
+  background: url("../images/artChico2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloChico--artChico3 {
+  background: url("../images/artChico3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloChico--artChico4 {
+  background: url("../images/artChico4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloChico--artChico5 {
+  background: url("../images/artChico5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBlog__articuloChico--artChico6 {
+  background: url("../images/artChico6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 html {

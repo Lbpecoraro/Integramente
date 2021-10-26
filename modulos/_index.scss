@@ -14,36 +14,46 @@
 
 .mainIndex__info {
     @include medidas(100%, 60vh);
-    background: url(../images/chica.jpg);
+    background: url(../images/lavandaFondo5.jpg);
     @include background (no-repeat, cover, 14% 50%);
     color: $blanco;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-    padding-right: 30rem;
 
 
     @include mobile {
         align-items: flex-start;
         padding-right: 5rem;
+
     }
 
     @include miniMobile {
         padding-right: 0;
+        @include medidas(100%, 80vh);
     }
 
     & h3 {
-        font-weight: 100;
+        font-weight: 400;
         font-size: 2rem;
         font-family: 'Montserrat', sans-serif;
+        padding-left: 1rem;
     }
 
     & p {
-        width: 100%;
+        width: 70%;
         line-height: 1.5rem;
         letter-spacing: 1px;
+        font-weight: 400;
+        font-size: 1.15rem;
         font-family: 'Montserrat', sans-serif;
+        padding-left: 1rem;
+
+        @include miniMobile {
+            padding: 1rem;
+            width: 100%;
+        }
     }
 }
 

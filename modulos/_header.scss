@@ -16,14 +16,14 @@
     @include tablet {
         @include medidas(100%, 100%);
         align-items: flex-start;
-        padding: 1rem 1rem 0 0;
+        padding: 0;
     }
 
     @include mobile {
         @include medidas(100%, 100%);
 
         align-items: flex-start;
-        padding: 0;
+
     }
 
     & .row {
@@ -50,6 +50,10 @@
 
 .header__elH1 {
     text-decoration: none;
+
+    @include mobile {
+        margin-top: .5rem;
+    }
 
     & h1 {
         background: linear-gradient(to top, $lavanda1, $lavandaMuyClaro);
@@ -86,15 +90,15 @@
 }
 
 .navbar-toggler {
-    width: 5rem;
-    height: 3rem;
+    @include medidas (5rem, 3rem);
 
     &:focus {
         box-shadow: none;
     }
 
     & ion-icon {
-        @include medidas(3rem, 3rem);
+        @include medidas(2rem, 2rem);
+        color: $lavandaClaro;
     }
 }
 
@@ -144,13 +148,80 @@
     }
 }
 
+
 .inicioDeSesion {
+
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.inicioDeSesion__iconContainer {
     height: 100%;
+    @include medidas(2rem, 2rem);
+    color: $lavanda1;
 
     & ion-icon {
         @include medidas(2rem, 2rem)
     }
+
+
 }
+
+.modalInicioDeSesion {
+    margin-top: 15rem;
+
+    .modal-dialog {
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal-content {
+        height: 20rem;
+        width: 30rem;
+        border: none;
+        border-radius: 1rem;
+
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background: $lavandaClaro;
+        color: $blanco;
+        border-radius: 1rem;
+    }
+
+    .modalInicioDeSesion__h3 {
+        align-self: center;
+
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    .inicioDeSesion__send {
+        width: 7rem;
+        align-self: flex-end;
+        background: $blanco;
+        color: $lavandaClaro;
+        border: none;
+        border-radius: .5rem;
+    }
+}
+
 
 .header__redes {
     justify-content: center;

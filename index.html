@@ -17,13 +17,12 @@
     <title>Integramente</title>
 </head>
 
-<body>
+<body class="p-0">
     <header class="header container-fluid">
         <div class="row justify-content-between">
             <div class="header__h1YNav col-lg-8 col-12">
                 <a class="header__elH1" href="index.html">
-                    <h1 class="my-0 ms-0 me-5
-                    ">INTEGRAMENTE</h1>
+                    <h1 class="my-0 ms-0 me-sm-5 ">INTEGRAMENTE</h1>
                 </a>
                 <nav class="navbar navbar-expand-lg header__navbar p-0">
                     <div class="container-fluid p-0">
@@ -34,23 +33,17 @@
                         </button>
                         <div class="collapse navbar-collapse header__subMenu" id="navbarNavDropdown">
                             <ul class="navbar-nav header__ul">
-                                <input type="button" value="Iniciar sesión" class="inicioDeSesion d-lg-none">
+                                <button type="button" class="btn inicioDeSesion  d-block d-lg-none col-lg-1"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <div class="inicioDeSesion__iconContainer ">
+                                        <ion-icon name="person-outline"></ion-icon>
+                                    </div>
+                                </button>
                                 <li class="nav-item">
                                     <a class="aGradient nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="aGradient nav-link dropdown-toggle" href="secciones/Servicios.html"
-                                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Servicios
-                                    </a>
-                                    <ul class="dropdown-menu p-0" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="secciones/Servicios.html">Según cantidad</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="secciones/Servicios.html">Según
-                                                especialidad</a>
-                                        </li>
-                                    </ul>
+
+                                <li class="nav-item">
+                                    <a class="aGradient nav-link" href="secciones/Servicios.html">Servicios</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="aGradient nav-link"
@@ -67,9 +60,49 @@
                     </div>
                 </nav>
             </div>
-            <div class="inicioDeSesion d-none d-lg-block col-lg-1">
-                <ion-icon name="person-outline"></ion-icon>
-            </div> <!-- Acá van las redes sociales -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn inicioDeSesion  d-none d-lg-block col-lg-1" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <div class="inicioDeSesion__iconContainer ">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal  fade modalInicioDeSesion" id="exampleModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+
+                            <h3 class="modalInicioDeSesion__h3"> Bienvenid@s a Integramente</h3>
+                            <form action="">
+                                <div>
+                                    <label for="email">Correo electrónico</label>
+                                    <input class="modalInicioDeSesion__email" type="email" name="email" id=""
+                                        placeholder="Ingrese su correo electrónico">
+                                </div>
+                                <div>
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" class="modalInicioDeSesion__password"
+                                        placeholder="Ingrese su contraseña" name="password">
+                                </div>
+                                <input class="inicioDeSesion__send" type="submit" value="Iniciar sesión">
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- Acá van las redes sociales -->
             <div class="header__redes d-lg-flex d-none col-lg-1">
                 <a href="https://www.facebook.com/">
                     <ion-icon class="m-0" name="logo-facebook"></ion-icon>
@@ -87,10 +120,11 @@
     <main class="mainIndex">
         <!-- EMPIEZA LA SECCIÓN DE INTRODUCCIÓN -->
         <section class="mainIndex__info">
-            <h3>Tu salud mental es nuestro objetivo</h3>
+            <h3>Tu salud mental es nuestra prioridad</h3>
             <p> Integramente es un sitio donde podrás tanto informarte acerca de temas relacionados con la
                 psicología,como tambien pedir ayuda por parte de profesionales de la salud mental. Queremos
-                proporcionarte un espacio seguro desde la comodidad de tu hogar para que puedas acceder a información
+                proporcionarte un espacio seguro desde la comodidad de tu hogar para que puedas acceder a
+                información
                 fiable previamente revisada para su publicación, y, además, adquirir un servicio de contención de
                 calidad
             </p>
@@ -101,7 +135,7 @@
             <div class="mainIndex__planesDiv container-fluid">
                 <div class="row justify-content-evenly">
                     <div class="plan p-0 col-lg-3 col-md-5 col-sm-8 col-8">
-                        <div class="plan__info">
+                        <div class="plan__info p-2">
                             <h4>Incluye:</h4>
                             <h5>Sesión única de 45 minutos aprox. con el profesional que más le convenga (según su
                                 disponibilidad)</h5>
@@ -112,7 +146,7 @@
                         <h3 class="m-0">Consulta Puntual</h3>
                     </div>
                     <div class="plan p-0 col-lg-3 mt-lg-0 col-md-5 mt-md-0 col-sm-8 mt-sm-4 col-8 mt-4">
-                        <div class="plan__info">
+                        <div class="plan__info p-2">
                             <h4>Incluye:</h4>
                             <h5>Dos sesiones por mes de 45 minutos aprox. cada una con el profesional que más le
                                 convenga
@@ -125,7 +159,7 @@
                         <h3 class="m-0">Consulta Bimensual</h3>
                     </div>
                     <div class="plan p-0 col-lg-3 mt-lg-0 col-md-5 mt-md-4 col-sm-8 mt-sm-4 col-8 mt-4">
-                        <div class="plan__info">
+                        <div class="plan__info p-2">
                             <h4>Incluye:</h4>
                             <h5>Una sesión semanal por un mes de 45 minutos aprox. cada una con el profesional que más
                                 le

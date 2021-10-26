@@ -1,8 +1,8 @@
 @import '../utilidades/variables';
 
 .mainServicios {
-    background: url(../images/cafeYLavanda.jpg);
-    @include background (no-repeat, cover, 50% 50%);
+    background: url(../images/lavandaFondo.jpg);
+    @include background (no-repeat, cover, 30% 30%);
     display: flex;
     flex-direction: column;
     @include medidas(100%, 100%);
@@ -96,5 +96,20 @@
 
 .mainServicios__div--TerapiaCC {
     background: url(../images/TerapiaCognitivoConductual.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+}
+
+.mainServicios__div--TerapiaExistencialHumanista {
+    background: url(../images/terapiaExisencial.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+}
+
+.mainServicios__div--TerapiaGestaltica {
+    background: url(../images/terapiaGestaltica.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+}
+
+.mainServicios__div--TerapiaInfantoJuvenil {
+    background: url(../images/terapiaJuvenil.jpg);
     @include background (no-repeat, cover, 50% 50%);
 }

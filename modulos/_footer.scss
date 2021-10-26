@@ -3,7 +3,7 @@
 
 .footer {
     @include medidas(100%, 100%);
-    background-image: linear-gradient(to right, $lavandaClaro, $lavandaOscuro);
+    background: linear-gradient(to right, $lavandaClaro, $lavandaOscuro);
     display: flex;
     align-items: center;
     justify-content: space-around;

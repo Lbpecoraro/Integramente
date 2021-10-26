@@ -3,10 +3,8 @@
 
 .mainBlog {
     @include medidas(100%, 100%);
-    background: url(../images/cafeYLavanda.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 30%;
+    background: url(../images/lavandaFondo.jpg);
+    @include background (no-repeat, cover, 30% 80%);
     padding: 1.5rem;
 }
 
@@ -16,7 +14,23 @@
 }
 
 .mainBlog__modalBlog {
-    z-index: 10100;
+    z-index: 101000;
+    margin-top: 14rem;
+
+    .btn {
+        color: black;
+
+
+        &:hover {
+            background: linear-gradient(to top, $lavanda1, $lavandaMuyClaro);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
 }
 
 .mainBlog__sectionAdvertencia {
@@ -152,12 +166,18 @@
 
 .mainBlog__articuloGrande {
     height: 15rem;
-    background: url(../images/pibeHaceYoga.jpg );
-    @include background (no-repeat, cover, 50% 50%);
 }
 
 .mainBlog__articuloChico {
     height: 10rem;
-    background: url(../images/ataqueDeAnsiedad.jfif);
-    @include background (no-repeat, cover, 50% 50%);
+}
+
+@each $size in Grande,
+Chico {
+    @for $i from 1 through 6 {
+        .mainBlog__articulo#{$size}--art#{$size}#{$i} {
+            background: url('../images/art#{$size}#{$i}.jpg');
+            @include background (no-repeat, cover, center);
+        }
+    }
 }
