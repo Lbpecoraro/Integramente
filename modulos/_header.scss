@@ -1,5 +1,5 @@
 @import '../utilidades/variables';
-@import 'mediaQueries';
+@import '../utilidades/mediaQueries';
 
 .header {
     @include medidas(100%, 15vh);
@@ -19,20 +19,8 @@
         padding: 0;
     }
 
-    @include mobile {
-        @include medidas(100%, 100%);
-
-        align-items: flex-start;
-
-    }
-
     & .row {
         width: 100%;
-
-        @include tablet {
-            flex-direction: row-reverse;
-        }
-
     }
 }
 
@@ -44,7 +32,6 @@
     @include tablet {
         justify-content: flex-end;
         align-items: flex-start;
-        flex-direction: row-reverse;
     }
 }
 

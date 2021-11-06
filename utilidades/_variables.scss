@@ -27,3 +27,7 @@ $lavandaOscuroTransparente: #9f05ff88;
     background-size: $size;
     background-position: $position;
 }
+
+@mixin transition {
+    transition: all .4s ease;
+}

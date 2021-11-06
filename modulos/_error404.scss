@@ -1,8 +1,8 @@
-@import 'mediaQueries';
 @import '../utilidades/variables';
+@import '../utilidades/mediaQueries';
 
 .error404 {
-    background: url(../images/perrito-casa-en-llamas.jpg);
+    background: url(../images/fondoLavanda4.jpg);
     @include medidas (100vw, 100vh);
     @include background (no-repeat, cover, 50% 50%);
     display: flex;
@@ -11,7 +11,9 @@
     justify-content: center;
 
     & h2 {
-        color: rgba(255, 255, 255, 0.705);
+        background: linear-gradient(to top, $lavanda1, $lavandaMuyClaro);
+        -webkit-background-clip: text;
+        color: transparent;
         font-size: 10rem;
 
     }

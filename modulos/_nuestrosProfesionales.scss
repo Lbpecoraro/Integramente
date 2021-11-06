@@ -1,5 +1,5 @@
 @import '../utilidades/variables';
-@import 'mediaQueries';
+@import '../utilidades/mediaQueries';
 
 .mainProfesionales {
     background: url(../images/lavandaFondo.jpg);
@@ -31,7 +31,7 @@
     border-top-right-radius: 4rem;
     align-items: center;
     box-shadow: 5px 5px .5rem $sombra;
-    transition: all .4s ease;
+    @include transition;
 
     @include miniMobile {
         flex-direction: column;

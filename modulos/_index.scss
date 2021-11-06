@@ -1,5 +1,5 @@
 @import '../utilidades/variables';
-@import 'mediaQueries';
+@import '../utilidades/mediaQueries';
 
 .mainIndex {
     height: 100%;
@@ -69,13 +69,17 @@
 
     @include medidas(100%, 100%);
     text-align: center;
-    background: url(../images/cafeYLavanda.jpg);
-    @include background (no-repeat, cover, 50% 30%);
+    background: url(../images/lavandaFondo7.jpg);
+    @include background (no-repeat, cover, 10% 65%);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     grid-area: planes;
     padding: 3rem 0;
+
+    @include tablet {
+        @include background (no-repeat, cover, 10% 100%);
+    }
 }
 
 .mainIndex__planesDiv {
@@ -93,6 +97,7 @@
     flex-direction: column;
     justify-content: space-between;
     transition: all .4s ease;
+    cursor: p;
 
     &:hover {
         transform: scale(1.1, 1.1);
