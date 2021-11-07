@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .mainContacto__form {
@@ -26,7 +25,6 @@
     @include tablet {
         width: 70%;
     }
-
 }
 
 .mainContacto__titulo {
@@ -41,7 +39,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    ;
 
     & div {
         display: flex;
@@ -63,12 +60,9 @@
         border-radius: .4rem;
         box-shadow: 2px 2px 5px $sombra;
     }
-
 }
 
 .mainContacto__mensaje {
-
-
     & textarea {
         width: 100%;
         padding-left: .3rem;

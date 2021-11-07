@@ -137,8 +137,6 @@
 
 
 .inicioDeSesion {
-
-
     &:focus {
         box-shadow: none;
     }
@@ -152,8 +150,6 @@
     & ion-icon {
         @include medidas(2rem, 2rem)
     }
-
-
 }
 
 .modalInicioDeSesion {
@@ -169,7 +165,6 @@
         width: 30rem;
         border: none;
         border-radius: 1rem;
-
     }
 
     .modal-body {

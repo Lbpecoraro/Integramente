@@ -12,14 +12,12 @@
     }
 }
 
-
 .mainBlog__modalBlog {
     z-index: 101000;
     margin-top: 14rem;
 
     .btn {
         color: black;
-
 
         &:hover {
             background: linear-gradient(to top, $lavanda1, $lavandaMuyClaro);
