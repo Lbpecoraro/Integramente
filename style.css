@@ -83,7 +83,7 @@ html {
 }
 @media only screen and (max-width: 991px) {
   .header__navbar {
-    width: 30%;
+    width: 35%;
     position: relative;
     top: 0;
     left: 0;
