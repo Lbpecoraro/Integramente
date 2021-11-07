@@ -4,9 +4,9 @@
 .mainContacto {
     background: url(../images/lavandaFondo6.jpg);
     @include background (no-repeat, cover, 20% 50%);
-    @include medidas(100%, 100vh);
+    @include medidas(100%, 100%);
     text-align: center;
-    padding-top: 2rem;
+    padding: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: center;

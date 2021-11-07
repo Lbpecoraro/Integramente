@@ -345,7 +345,7 @@ html {
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.4s ease;
-  cursor: p;
+  cursor: pointer;
 }
 .plan:hover {
   transform: scale(1.1, 1.1);
@@ -481,8 +481,8 @@ html {
 }
 .mainServicios__cantidad h2,
 .mainServicios__especialidad h2 {
-  text-shadow: 2px 2px 2px rgba(129, 129, 129, 0.767);
-  color: white;
+  color: #9E05FF;
+  margin-bottom: 1.5rem;
 }
 
 .mainServicios__contenedor1,
@@ -524,6 +524,93 @@ html {
 .mainServicios__contenedor1 .mainServicios__div:hover > h3,
 .mainServicios__contenedor2 .mainServicios__div:hover > h3 {
   background: #9E05FF;
+}
+
+.mainServicios__modalServicios:focus {
+  box-shadow: none;
+}
+
+.modalServicio .modal-dialog {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  max-width: 55rem;
+}
+@media only screen and (max-width: 991px) {
+  .modalServicio .modal-dialog {
+    margin-top: 20%;
+    max-width: 50rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .modalServicio .modal-dialog {
+    margin-top: 20%;
+    max-width: 45rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .modalServicio .modal-dialog {
+    margin-top: 10%;
+    max-width: 40rem;
+    padding: 0;
+  }
+}
+.modalServicio .modal-content {
+  width: 100%;
+  border: none;
+  background: linear-gradient(to top, #9E05FF, #F2DCFF);
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 575px) {
+  .modalServicio .modal-content {
+    width: 75%;
+  }
+}
+.modalServicio .modal-body {
+  width: 100%;
+}
+
+.tarjetaServicio {
+  flex-direction: row;
+  border-radius: 0.5rem;
+  border: none;
+  overflow: hidden;
+  background: linear-gradient(to top, #9E05FF, #c06cf5);
+  color: white;
+  font-size: 1.15rem;
+}
+.tarjetaServicio h5 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+}
+@media only screen and (max-width: 575px) {
+  .tarjetaServicio h5 {
+    font-size: 2rem;
+  }
+}
+.tarjetaServicio .tarjetaServicio__info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.tarjetaServicio .list-group-item {
+  background: transparent;
+  color: white;
+}
+.tarjetaServicio .btn {
+  color: white;
+  background: #c06cf5;
+  align-self: flex-end;
+  margin: 0 0.5rem 0.5rem 0;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+.tarjetaServicio .btn:hover {
+  background: #5c0096;
+}
+.tarjetaServicio .btn:focus {
+  box-shadow: none;
 }
 
 .mainServicios__div--sesionIndividual {
@@ -829,17 +916,18 @@ html {
 
 .mainBlog {
   width: 100%;
-  height: 100%;
+  height: 75vh;
   background: url(../images/lavandaFondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 30% 80%;
   padding: 1.5rem;
 }
-
-.mainBlog__buscador {
-  width: 30rem;
-  margin-bottom: 1rem;
+@media only screen and (max-width: 991px) {
+  .mainBlog {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .mainBlog__modalBlog {
@@ -876,11 +964,15 @@ html {
 
 .mainBlog__sectionArticulos {
   width: 100%;
-  height: 100%;
+  height: 85%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 1rem;
+}
+@media only screen and (max-width: 991px) {
+  .mainBlog__sectionArticulos {
+    margin-top: 2rem;
+  }
 }
 .mainBlog__sectionArticulos .row {
   width: 100%;
@@ -896,6 +988,7 @@ html {
   display: flex;
   justify-content: right;
   align-items: center;
+  cursor: pointer;
 }
 
 .mainBlog__contenedor1,
@@ -1085,9 +1178,9 @@ html {
   background-size: cover;
   background-position: 20% 50%;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   text-align: center;
-  padding-top: 2rem;
+  padding: 2rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
